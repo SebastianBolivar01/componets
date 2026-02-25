@@ -41,6 +41,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            comentario
             <Image
               className="dark:invert"
               src="/vercel.svg"

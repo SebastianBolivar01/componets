@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #D4DBED;
   --foreground: #171717;
   /* Definimos las variables puras aquí */
   --brand-blue: #3b49df;
@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f8fafc; /* Forzamos fondo claro como en la imagen */
+    --background: #C9C1C1; /* Forzamos fondo claro como en la imagen */
     --foreground: #171717;
   }
 }
@@ -36,7 +36,7 @@ body {
 
 /* 1. Definimos las variables de color */
 :root {
-  --background: #f8fafc;
+  --background: #D4DBED;
   --foreground: #1e293b;
   --brand-blue: #3b49df;
   --brand-green: #10b981;

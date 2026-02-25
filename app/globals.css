@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Definimos las variables puras aquí */
+  --brand-blue: #3b49df;
+  --brand-green: #10b981;
 }
 
 @theme inline {
@@ -10,12 +13,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Esto permite usar bg-brand-blue y text-brand-green */
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-green: var(--brand-green);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc; /* Forzamos fondo claro como en la imagen */
+    --foreground: #171717;
   }
 }
 
@@ -23,4 +30,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@import "tailwindcss";
+
+/* 1. Definimos las variables de color */
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --brand-blue: #3b49df;
+  --brand-green: #10b981;
+}
+
+/* 2. Registramos los colores en el tema de Tailwind v4 */
+@theme {
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-green: var(--brand-green);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* 3. Estilos base */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif;
 }
